@@ -1,1 +1,149 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap//dist//css/bootstrap.rtl.min.css";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'CustomFont';
+    src: url('/fonts/Alexandria-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+html {
+    scroll-behavior: smooth !important;
+} 
+body {
+    font-family: 'CustomFont', sans-serif !important;
+}
+//global var
+$primary-bg-color: #F79321;
+$Second-bg-color: #1A1A1A;
+$Gray-color: #737171;
+$Text-color: #333333;
+
+//global class
+.bg-main-gradient{
+    background: linear-gradient(to right,#7047a1, #47c7c7) !important;   
+}
+.bg-main-gradient-rev{
+    background: linear-gradient(to left,#7047a1, #47c7c7) !important;   
+}
+.btn-gradient,.btn-white{
+    background: $primary-bg-color !important;
+    border: 1px solid $primary-bg-color !important;
+    color: white !important;
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    border-radius: 16px !important;
+    cursor: pointer !important;
+    transition: all 1s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+.btn-gradient::before
+{
+    position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: -100%;
+  top: 0;
+  transform: translateY(0);
+  white-space: nowrap;
+  color: $primary-bg-color;
+  font-size: 16px;
+  transition: all 0.8s ease;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.btn-gradient span {
+    display: inline-block;
+  transition: transform 0.8s ease; /* تعديل المدة لـ 0.8s لتكون مماثلة للحركة */
+  color: white !important;
+  }
+  
+  .btn-gradient:hover {
+    border: 1px solid $primary-bg-color !important;
+  color: $primary-bg-color !important;
+  }
+  
+  .btn-gradient:hover span {
+    transform: translateY(120%); /* النص الأصلي ينزل للأسفل */
+  }
+  
+  .btn-gradient:hover::before {
+    left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  }
+.btn-gradient span {
+    transition: transform 0.8s ease; /* نفس الانتقال المستخدم في التحرك للأسفل */
+}
+
+.btn-white
+{
+    background: white !important;
+    color: $primary-bg-color !important;
+}
+.btn-white:hover
+{
+    background-color: $primary-bg-color !important;
+    color: white !important;
+}
+.bg-main
+{
+background-color: $primary-bg-color !important;
+}
+.bg-second
+{
+background-color: $Second-bg-color !important;
+}
+.text-main
+{
+color: $primary-bg-color !important;
+transition: all 0.3s ease-in-out;
+}
+.text-main:hover
+{
+    transform: scale(1.2);
+    color: $Second-bg-color !important;
+}
+.text-second
+{
+color: $Second-bg-color !important;
+}
+.w-90{
+    width: 90% !important;
+}
+
+
+/* التحكم في عرض وارتفاع شريط التمرير */
+::-webkit-scrollbar {
+    width: 13px; /* عرض شريط التمرير الرأسي */
+    height: 29px; /* ارتفاع شريط التمرير الأفقي */
+  }
+  
+  /* تخصيص مقبض شريط التمرير */
+  ::-webkit-scrollbar-thumb {
+    background-color: $primary-bg-color; /* لون المقبض */
+    border-radius: 4px; /* جعل الأطراف دائرية */
+  }
+  
+  /* إضافة حدود لمقبض شريط التمرير */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: $Second-bg-color; /* لون المقبض عند التحويم */
+  }
+  
+  /* تخصيص المسار الخلفي لشريط التمرير */
+  ::-webkit-scrollbar-track {
+    background-color: #ecf0f1; /* لون الخلفية للمسار */
+  }
+
+  [appAddTextBeforeAfter]::before {
+    content: attr(data-text-before);
+  }

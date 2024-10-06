@@ -1,0 +1,101 @@
+<nav class="navbar navbar-expand-lg fixed-top shadow border-5 bg-white w-100 mt-0 p-0">
+    <div class="container">
+      <a class="navbar-brand text-center" href="">
+        <img src="/images/logo.png" class="w-75"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-90 d-flex text-center justify-content-between  mx-auto">
+          <li class="nav-item hover-text-container">
+            <a class="nav-link hover-text" 
+                [routerLink]="['/home']"
+                (click)="setActiveSection('home')"
+                [class.active]="activeSection === 'home'">
+                {{'navbar.home' | translate}}
+            </a>
+          </li>
+          <li class="nav-item hover-text-container">
+            <a class="nav-link hover-text" 
+                [routerLink]="['/home']" 
+                fragment="about" 
+                (click)="setActiveSection('about')"
+                [class.active]="activeSection === 'about'">
+                من نحن
+            </a>
+          </li>
+          <li class="nav-item hover-text-container">
+            <a class="nav-link hover-text" 
+                [routerLink]="['/home']" 
+                fragment="message" 
+                (click)="setActiveSection('message')"
+                [class.active]="activeSection === 'message'">
+                رسالتنا
+            </a>
+          </li>
+          <li class="nav-item hover-text-container">
+            <a class="nav-link hover-text" 
+                [routerLink]="['/home']" 
+                fragment="vision" 
+                (click)="setActiveSection('vision')"
+                [class.active]="activeSection === 'vision'">
+                رؤيتنا
+            </a>
+          </li>
+          <li class="nav-item hover-text-container">
+            <a class="nav-link hover-text" 
+                [routerLink]="['/home']" 
+                fragment="goals" 
+                (click)="setActiveSection('goals')"
+                [class.active]="activeSection === 'goals'">
+                أهدافنا
+            </a>
+          </li>
+          <li class="nav-item hover-text-container">
+            <a class="nav-link hover-text" 
+                [routerLink]="['/home']" 
+                fragment="values" 
+                (click)="setActiveSection('values')"
+                [class.active]="activeSection === 'values'">
+                قيمنا
+            </a>
+          </li>
+          <li class="nav-item hover-text-container">
+            <a class="nav-link hover-text" 
+                [routerLink]="['/home']" 
+                fragment="service" 
+                (click)="setActiveSection('service')"
+                [class.active]="activeSection === 'service'">
+                خدماتنا
+            </a>
+          </li>
+          <li class="nav-item hover-text-container">
+            <a class="nav-link hover-text" 
+                [routerLink]="['/home']" 
+                fragment="project" 
+                (click)="setActiveSection('project')"
+                [class.active]="activeSection === 'project'">
+                مشاريعنا
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{'Language' | translate}}
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" (click)="changeLang('ar')">العربية</a></li>
+              <li><a class="dropdown-item" (click)="changeLang('en')">English</a></li>
+            </ul>
+          </li>
+          <li class="nav-item hover-text-container">
+            <button appAddTextBeforeAfter class="btn-gradient px-3 py-2 " 
+                [routerLink]="['/home']" 
+                fragment="contact-us">
+                <span>تواصل معنا</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

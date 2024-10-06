@@ -1,0 +1,63 @@
+.nav-item a:hover,.active
+{
+    color: #F79321 !important;
+}
+.hover-text-container {
+    display: inline-block;
+    position: relative;
+}
+.hover-text {
+    position: relative;
+    display: inline-block;
+}  
+.active::before {
+    content: '';
+    position: absolute;
+    bottom:  0%;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: #F79321;
+    transform: translateY(-50%);
+    transition: width 1s ease;
+    z-index: 1;
+}
+.active::before
+{
+  animation-name: top-line;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.active
+{
+    transition: all 0.5s ease;
+    transform: scale(1.07);
+}
+@keyframes top-line {
+    from  {
+            width: 0%;
+            left: auto;
+            right: 0;
+        }
+    to {
+            width: 100%;
+            left: auto;
+            right: 0;
+        }
+}
+.hover-text {
+    position: relative;
+    z-index: 2; /* النص يظهر فوق الخط */
+    font-weight: 500 !important;
+}
+
+@media (min-width: 990px) and (max-width: 1200px) {
+    .nav-link{
+        font-size: 12px;
+    }
+    .btn-gradient
+    {
+        font-size: 12px;
+        padding: 7px !important;
+    }
+}
