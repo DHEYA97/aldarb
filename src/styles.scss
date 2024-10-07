@@ -1,4 +1,3 @@
-@import "../node_modules/bootstrap//dist//css/bootstrap.rtl.min.css";
 
 *{
     margin: 0px;
@@ -22,6 +21,7 @@ $primary-bg-color: #F79321;
 $Second-bg-color: #1A1A1A;
 $Gray-color: #737171;
 $Text-color: #333333;
+$Gray-Bg : #F7F7F7;
 
 //global class
 .bg-main-gradient{
@@ -36,7 +36,7 @@ $Text-color: #333333;
     color: white !important;
     padding: 10px 20px !important;
     font-size: 16px !important;
-    border-radius: 16px !important;
+    border-radius: 100px !important;
     cursor: pointer !important;
     transition: all 1s ease-in-out;
     position: relative;
@@ -84,7 +84,10 @@ $Text-color: #333333;
 .btn-gradient span {
     transition: transform 0.8s ease; /* نفس الانتقال المستخدم في التحرك للأسفل */
 }
-
+.bg-Gray
+{
+  background-color: $Gray-Bg !important;
+}
 .btn-white
 {
     background: white !important;
@@ -147,3 +150,33 @@ color: $Second-bg-color !important;
   [appAddTextBeforeAfter]::before {
     content: attr(data-text-before);
   }
+
+
+  .main-text {
+    text-align: center;
+    width: 300px;
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  /* استخدام ::after لإنشاء النص الخلفي */
+  .main-text::before {
+    position: absolute;
+    top: -70px;
+    inset-inline-end: 20%;
+    font-size: 64px;
+    font-weight: bold;
+    color: transparent; /* لجعل النص الداخلي فارغًا */
+    -webkit-text-stroke: 0.1px rgba(255, 165, 0, 0.2); 
+    z-index: -1;  /* إرسال النص الخلفي إلى الخلفية */
+  }
+  .main-text::after
+  {
+    content: url('data:image/svg+xml,%3Csvg%20width%3D%2259%22%20height%3D%225%22%20viewBox%3D%220%200%2059%205%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M2.5%202.5H56.5%22%20stroke%3D%22%23F79321%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%20stroke-dasharray%3D%2212%2012%22/%3E%3C/svg%3E');
+    position: absolute;
+    top: 0%;
+    inset-inline-start: -3%;
+}

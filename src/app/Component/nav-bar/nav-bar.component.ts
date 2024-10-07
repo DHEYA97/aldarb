@@ -32,7 +32,7 @@ export class NavBarComponent implements OnInit {
     const section = document.getElementById(sectionId);
     if (section) {
       const offsetTop = section.offsetTop;
-      const extraOffset = 75; // Adjust this value as needed
+      const extraOffset = 110; // Adjust this value as needed
       window.scrollTo({
         top: offsetTop - extraOffset,
         behavior: 'smooth',
@@ -43,7 +43,7 @@ export class NavBarComponent implements OnInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const sections = ['home', 'about', 'message', 'vision', 'goals','values','service','project','contact-us'];
-    const extraOffset = 100; // زيادة الإزاحة لضبط التنشيط في الوقت المناسب
+    const extraOffset = 110; // زيادة الإزاحة لضبط التنشيط في الوقت المناسب
 
     sections.forEach((sectionId) => {
       const section = document.getElementById(sectionId);
@@ -61,7 +61,6 @@ export class NavBarComponent implements OnInit {
 
 changeLang(lang:string):void
 {
-  console.log(lang)
   this.languageService.changeLang(lang);
 }
 }

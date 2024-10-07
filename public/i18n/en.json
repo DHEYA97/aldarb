@@ -1,6 +1,33 @@
 {
     "Language" : "Language",
     "navbar": {
-        "home" : "Home"
+        "home" : "Home",
+        "about" : "About Us",
+        "mission" : "Mission",
+        "vision" : "Vision",
+        "goals" : "objectives",
+        "values" : "values",
+        "service" : "services",
+        "project" : "Project",
+        "contactUs" : "Contact Us"
+    },
+    "main":{
+        "maintext" : "ensure that your goods are transported according to international standards.",
+        "title1" : "An integrated fleet that meets the highest quality standards of land and logistics transportation.",
+        "title2" : "the preferred transportation partner",
+        "title3" : "throughout the Kingdom, the GCC countries, Jordan and Egypt",
+        "profile" : "Download profile"
+    },
+    "about":{
+        "aboutus" : "About Us",
+        "text" : "Aldarb General Company is one of the leading companies in the field of land transport and logistics. We provide road transport and logistics services within the Kingdom of Saudi Arabia, GCC countries, Jordan, and Egypt. Headquartered in Riyadh, we operate a comprehensive fleet consisting of tractor-trailers, trailers, specialized vehicles for heavy equipment and ready-mix concrete, flatbed trailers for long and high loads, and high-capacity flatbed trucks. In addition to our expert and trained team handling all types of goods and exceptional loads, we manage customer needs through extensive operations to meet the highest quality standards."
+    },
+    "vision":{
+        "vision" : "Vision",
+        "text" : "Al Darb Al Aam Company seeks to be a leader in the land transportation and logistics sector in the Kingdom of Saudi Arabia and the GCC region, and aims to provide the best transportation and logistics services with international standards. We strive to achieve excellence in every aspect of our work, by investing in developing infrastructure and technology, providing an advanced and diverse fleet, and training and qualifying workers to ensure providing exceptional services that meet the needs of our customers."
+    },
+    "mission":{
+        "mission" : "Mission",
+        "text" : "Aldarb General Company aims to provide innovative and reliable transport and logistics solutions that meet the needs of our clients in Saudi Arabia and the Gulf Cooperation Council countries. We strive for sustainable growth and sustainability by excelling in service and innovation in everything we offer, with a strong commitment to quality, efficiency, and professionalism in all aspects of our operations."
     }
 }

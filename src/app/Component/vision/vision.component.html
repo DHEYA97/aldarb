@@ -1,0 +1,19 @@
+<section id="vision" class="mt-5 py-5">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-6">
+                <h2 class="main-text" 
+                    *ngIf="'vision.vision' | translate as languageText" 
+                    appAddTextBeforeAfter [text]="languageText" [isVisible]="languageText.length > 0"
+                    >{{languageText}}
+                </h2>
+                <h4 class="fs-5 fw-lighter text-start lh-base w-75">
+                    {{'vision.text' | translate}}
+                </h4>
+            </div>
+            <div class="col-md-6">
+                <img src="/images/vision.png" class="w-100 rounded-4 border-4 border-black"/>
+            </div>
+        </div>
+    </div>
+</section>

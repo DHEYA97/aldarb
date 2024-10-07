@@ -22,16 +22,7 @@
                 fragment="about" 
                 (click)="setActiveSection('about')"
                 [class.active]="activeSection === 'about'">
-                من نحن
-            </a>
-          </li>
-          <li class="nav-item hover-text-container">
-            <a class="nav-link hover-text" 
-                [routerLink]="['/home']" 
-                fragment="message" 
-                (click)="setActiveSection('message')"
-                [class.active]="activeSection === 'message'">
-                رسالتنا
+                {{'navbar.about' | translate}}
             </a>
           </li>
           <li class="nav-item hover-text-container">
@@ -40,7 +31,16 @@
                 fragment="vision" 
                 (click)="setActiveSection('vision')"
                 [class.active]="activeSection === 'vision'">
-                رؤيتنا
+                {{'navbar.vision' | translate}}
+            </a>
+          </li>
+          <li class="nav-item hover-text-container">
+            <a class="nav-link hover-text" 
+                [routerLink]="['/home']" 
+                fragment="message" 
+                (click)="setActiveSection('mission')"
+                [class.active]="activeSection === 'mission'">
+                {{'navbar.mission' | translate}}
             </a>
           </li>
           <li class="nav-item hover-text-container">
@@ -49,7 +49,7 @@
                 fragment="goals" 
                 (click)="setActiveSection('goals')"
                 [class.active]="activeSection === 'goals'">
-                أهدافنا
+                {{'navbar.goals' | translate}}
             </a>
           </li>
           <li class="nav-item hover-text-container">
@@ -58,7 +58,7 @@
                 fragment="values" 
                 (click)="setActiveSection('values')"
                 [class.active]="activeSection === 'values'">
-                قيمنا
+                {{'navbar.values' | translate}}
             </a>
           </li>
           <li class="nav-item hover-text-container">
@@ -67,7 +67,7 @@
                 fragment="service" 
                 (click)="setActiveSection('service')"
                 [class.active]="activeSection === 'service'">
-                خدماتنا
+                {{'navbar.service' | translate}}
             </a>
           </li>
           <li class="nav-item hover-text-container">
@@ -76,7 +76,7 @@
                 fragment="project" 
                 (click)="setActiveSection('project')"
                 [class.active]="activeSection === 'project'">
-                مشاريعنا
+                {{'navbar.project' | translate}}
             </a>
           </li>
           <li class="nav-item dropdown">
@@ -89,10 +89,15 @@
             </ul>
           </li>
           <li class="nav-item hover-text-container">
-            <button appAddTextBeforeAfter class="btn-gradient px-3 py-2 " 
-                [routerLink]="['/home']" 
-                fragment="contact-us">
-                <span>تواصل معنا</span>
+            <button 
+              *ngIf="'navbar.contactUs' | translate as languageText" 
+              appAddTextBeforeAfter [text]="languageText" [isVisible]="languageText.length > 0" 
+              class="btn-gradient px-3 py-2" 
+              [routerLink]="['/home']" 
+              fragment="contact-us">
+              <span>
+                {{languageText}}
+              </span>
             </button>
           </li>
         </ul>

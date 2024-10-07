@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SharedModule } from './Shared/Module/shared/shared.module';
 import { NavBarComponent } from './Component/nav-bar/nav-bar.component';
+import { LanguageService } from './Core/Service/language.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,14 @@ import { NavBarComponent } from './Component/nav-bar/nav-bar.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent 
-{
+export class AppComponent implements OnInit {
+  title = 'New-Angular-Course';  
+  constructor(private LanguageService:LanguageService){}
+  ngOnInit(): void {
+    this.initialAppLanguage()
+  }
+  
+  initialAppLanguage():void{
+    this.LanguageService.initialAppLanguage();
+  }
 }
