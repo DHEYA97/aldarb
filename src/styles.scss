@@ -6,7 +6,7 @@
 }
 @font-face {
     font-family: 'CustomFont';
-    src: url('/fonts/Alexandria-Regular.ttf') format('truetype');
+    src: url('/fonts/Alexandria-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -44,7 +44,7 @@ $Gray-Bg : #F7F7F7;
 }
 .btn-gradient::before
 {
-    position: absolute;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,6 +88,10 @@ $Gray-Bg : #F7F7F7;
 {
   background-color: $Gray-Bg !important;
 }
+.bg-Second
+{
+  background-color: $Second-bg-color !important;
+}
 .btn-white
 {
     background: white !important;
@@ -114,7 +118,7 @@ transition: all 0.3s ease-in-out;
 .text-main:hover
 {
     transform: scale(1.2);
-    color: $Second-bg-color !important;
+    color: #ffbb6d !important;
 }
 .text-second
 {
@@ -171,7 +175,7 @@ color: $Second-bg-color !important;
     font-weight: bold;
     color: transparent; /* لجعل النص الداخلي فارغًا */
     -webkit-text-stroke: 0.1px rgba(255, 165, 0, 0.2); 
-    z-index: -1;  /* إرسال النص الخلفي إلى الخلفية */
+    z-index: 1;    
   }
   .main-text::after
   {

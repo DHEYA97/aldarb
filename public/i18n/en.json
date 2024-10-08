@@ -29,5 +29,23 @@
     "mission":{
         "mission" : "Mission",
         "text" : "Aldarb General Company aims to provide innovative and reliable transport and logistics solutions that meet the needs of our clients in Saudi Arabia and the Gulf Cooperation Council countries. We strive for sustainable growth and sustainability by excelling in service and innovation in everything we offer, with a strong commitment to quality, efficiency, and professionalism in all aspects of our operations."
+    },
+    "goal":{
+        "goal" : "objectives",
+        "goal01" : "Enhancing quality and professionalism in all aspects of our operations to maintain our position as a leading strategic partner in the market.",
+        "goal02" : "Expanding and diversifying our fleet to meet diverse transportation needs, including heavy and light equipment.",
+        "goal03" : "Providing innovative and reliable transport and logistics services that meet and exceed customer expectations.",
+        "goal04" : "Achieving leadership in the land transport and logistics sector in the Kingdom of Saudi Arabia and the Gulf Cooperation Council region."
+    },
+    "galary":{
+        "galary01" : "AlDarb",
+        "galary02" : "Galary"
+    },
+    "values":{
+        "values" : "Values",
+        "Commitment" : "Commitment",
+        "Safety" : "Safety",
+        "responsibility":"responsibility",
+        "perfection":"perfection"
     }
 }

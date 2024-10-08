@@ -1,4 +1,4 @@
-import { Inject, Injectable } from '@angular/core';
+import { EventEmitter, Inject, Injectable } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { TranslationService } from './translation.service';
 import { LocalStorageService } from './local-storage.service';
@@ -12,7 +12,8 @@ export class LanguageService {
   private html: HTMLElement;
   private currentLang: string;
   private bootstrapLinkElement: HTMLLinkElement;
-
+  public langChanged: EventEmitter<string> = new EventEmitter<string>();
+  
   constructor(
     private translationService: TranslationService,
     private localStorageService: LocalStorageService,
@@ -35,6 +36,7 @@ export class LanguageService {
   changeLang(lang: string): void {
     this.translationService.Use(lang);
     this.setLang(lang);
+    this.langChanged.emit(lang);
   }
 
   getDirection(): string {

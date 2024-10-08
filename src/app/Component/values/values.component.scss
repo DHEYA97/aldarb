@@ -1,0 +1,33 @@
+.bor01
+{
+    position: absolute;
+    width: 190px;
+    height: 148px;
+    border-radius: 4px;
+    border: 2px solid #EEEEEE;
+}
+.bor01 svg
+{
+    position: absolute;
+    top: 50%;
+    inset-inline-start: 15px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+}
+.bor02
+{
+    position: absolute;
+    width: 176px;
+    height: 115px;
+    border-radius: 4px;
+    border: 2px solid #F79321;
+    inset-inline-start: 80px;
+    transform: translateY(15px);
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.bor:hover .bor02
+{
+    transform: scale(1.1);
+}

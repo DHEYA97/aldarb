@@ -1,0 +1,64 @@
+<section id="values" class="mt-4 py-5 min-vh-100">
+    <div class="container">
+        <div class="w-25 mx-auto">
+            <h2 class="main-text"
+                *ngIf="'values.values' | translate as languageText" 
+                appAddTextBeforeAfter [text]="languageText" [isVisible]="languageText.length > 0"
+        >{{languageText}}</h2>
+        </div>
+        <div class="row mx-auto mt-5">
+            <div class="col-md-3">
+                <div class="bor position-relative">
+                    <div class="bor01">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.6667 12.8333V5.5M29.3333 12.8333V5.5M12.8333 20.1667H31.1667M9.16667 38.5H34.8333C35.8058 38.5 36.7384 38.1137 37.4261 37.4261C38.1137 36.7384 38.5 35.8058 38.5 34.8333V12.8333C38.5 11.8609 38.1137 10.9282 37.4261 10.2406C36.7384 9.55298 35.8058 9.16667 34.8333 9.16667H9.16667C8.19421 9.16667 7.26158 9.55298 6.57394 10.2406C5.88631 10.9282 5.5 11.8609 5.5 12.8333V34.8333C5.5 35.8058 5.88631 36.7384 6.57394 37.4261C7.26158 38.1137 8.19421 38.5 9.16667 38.5Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                            
+                    </div>
+                    <div class="bor02 text-center d-flex flex-column align-items-center justify-content-center">
+                        <h4 class="text-main">01</h4>
+                        <h4 class="fw-bold">{{'values.Commitment' | translate}}</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="bor position-relative">
+                    <div class="bor01">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 27.5V31.1667M11 38.5H33C33.9725 38.5 34.9051 38.1137 35.5928 37.4261C36.2804 36.7384 36.6667 35.8058 36.6667 34.8333V23.8333C36.6667 22.8609 36.2804 21.9282 35.5928 21.2406C34.9051 20.553 33.9725 20.1667 33 20.1667H11C10.0276 20.1667 9.09495 20.553 8.40732 21.2406C7.71968 21.9282 7.33337 22.8609 7.33337 23.8333V34.8333C7.33337 35.8058 7.71968 36.7384 8.40732 37.4261C9.09495 38.1137 10.0276 38.5 11 38.5ZM29.3334 20.1667V12.8333C29.3334 10.8884 28.5608 9.02315 27.1855 7.64788C25.8102 6.27262 23.945 5.5 22 5.5C20.0551 5.5 18.1899 6.27262 16.8146 7.64788C15.4393 9.02315 14.6667 10.8884 14.6667 12.8333V20.1667H29.3334Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                                                        
+                    </div>
+                    <div class="bor02 text-center d-flex flex-column align-items-center justify-content-center">
+                        <h4 class="text-main">02</h4>
+                        <h4 class="fw-bold">{{'values.Safety' | translate}}</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="bor position-relative">
+                    <div class="bor01">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24.5001 17.1667H20.8334C19.861 17.1667 18.9283 17.553 18.2407 18.2406C17.5531 18.9282 17.1667 19.8609 17.1667 20.8333V42.8333C17.1667 43.8058 17.5531 44.7384 18.2407 45.4261C18.9283 46.1137 19.861 46.5 20.8334 46.5H39.1667C40.1392 46.5 41.0718 46.1137 41.7595 45.4261C42.4471 44.7384 42.8334 43.8058 42.8334 42.8333V20.8333C42.8334 19.8609 42.4471 18.9282 41.7595 18.2406C41.0718 17.553 40.1392 17.1667 39.1667 17.1667H35.5001M24.5001 17.1667C24.5001 18.1391 24.8864 19.0718 25.574 19.7594C26.2617 20.447 27.1943 20.8333 28.1667 20.8333H31.8334C32.8059 20.8333 33.7385 20.447 34.4261 19.7594C35.1138 19.0718 35.5001 18.1391 35.5001 17.1667M24.5001 17.1667C24.5001 16.1942 24.8864 15.2616 25.574 14.5739C26.2617 13.8863 27.1943 13.5 28.1667 13.5H31.8334C32.8059 13.5 33.7385 13.8863 34.4261 14.5739C35.1138 15.2616 35.5001 16.1942 35.5001 17.1667M30.0001 30H35.5001M30.0001 37.3333H35.5001M24.5001 30H24.5184M24.5001 37.3333H24.5184" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                                                      
+                    </div>
+                    <div class="bor02 text-center d-flex flex-column align-items-center justify-content-center">
+                        <h4 class="text-main">03</h4>
+                        <h4 class="fw-bold">{{'values.responsibility' | translate}}</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="bor position-relative">
+                    <div class="bor01">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24.5 42.8333V31.8333C24.5 30.8609 24.1137 29.9282 23.4261 29.2406C22.7384 28.553 21.8058 28.1667 20.8333 28.1667H17.1667C16.1942 28.1667 15.2616 28.553 14.5739 29.2406C13.8863 29.9282 13.5 30.8609 13.5 31.8333V42.8333C13.5 43.8058 13.8863 44.7384 14.5739 45.4261C15.2616 46.1137 16.1942 46.5 17.1667 46.5H20.8333C21.8058 46.5 22.7384 46.1137 23.4261 45.4261C24.1137 44.7384 24.5 43.8058 24.5 42.8333ZM24.5 42.8333V24.5C24.5 23.5275 24.8863 22.5949 25.5739 21.9073C26.2616 21.2196 27.1942 20.8333 28.1667 20.8333H31.8333C32.8058 20.8333 33.7384 21.2196 34.4261 21.9073C35.1137 22.5949 35.5 23.5275 35.5 24.5V42.8333M24.5 42.8333C24.5 43.8058 24.8863 44.7384 25.5739 45.4261C26.2616 46.1137 27.1942 46.5 28.1667 46.5H31.8333C32.8058 46.5 33.7384 46.1137 34.4261 45.4261C35.1137 44.7384 35.5 43.8058 35.5 42.8333M35.5 42.8333V17.1667C35.5 16.1942 35.8863 15.2616 36.5739 14.5739C37.2616 13.8863 38.1942 13.5 39.1667 13.5H42.8333C43.8058 13.5 44.7384 13.8863 45.4261 14.5739C46.1137 15.2616 46.5 16.1942 46.5 17.1667V42.8333C46.5 43.8058 46.1137 44.7384 45.4261 45.4261C44.7384 46.1137 43.8058 46.5 42.8333 46.5H39.1667C38.1942 46.5 37.2616 46.1137 36.5739 45.4261C35.8863 44.7384 35.5 43.8058 35.5 42.8333Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                                                          
+                    </div>
+                    <div class="bor02 text-center d-flex flex-column align-items-center justify-content-center">
+                        <h4 class="text-main">04</h4>
+                        <h4 class="fw-bold">{{'values.perfection' | translate}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

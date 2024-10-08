@@ -1,0 +1,17 @@
+.border-text {
+    font-size: 64px;
+    font-weight: bold;
+    color: transparent; /* لجعل النص الداخلي فارغًا */
+    -webkit-text-stroke: 0.1px rgba(255, 165, 0, 0.8);
+}
+.arraw-up,.arraw-down
+{
+    position: absolute;
+    inset-inline-end: -20%;
+    top: 20%;
+}
+.arraw-down
+{
+    top: 0%;
+    //transform: scaleX(-1); 
+}

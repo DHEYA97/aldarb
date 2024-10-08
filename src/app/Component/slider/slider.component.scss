@@ -1,0 +1,15 @@
+.carousel {
+    width: 100%;  /* عرض السلايدر بالكامل */
+}  
+.slide img {
+    width: 100%;  /* عرض الصورة بالكامل */
+    object-fit: cover; /* للحفاظ على النسب عند تعبئة السلايدر */
+    border: none;       /* إزالة أي حدود على الصور */
+    outline: none;      /* إزالة أي إطار خارجي (outline) */
+    box-shadow: none;  
+}
+.slick-slide {
+    border: none;       /* إزالة أي حدود على عناصر السلايدر */
+    outline: none;      /* إزالة الإطار الخارجي */
+    box-shadow: none;   /* إزالة الظلال إن وجدت */
+}

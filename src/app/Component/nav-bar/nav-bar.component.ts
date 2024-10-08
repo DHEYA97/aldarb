@@ -42,7 +42,7 @@ export class NavBarComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    const sections = ['home', 'about', 'message', 'vision', 'goals','values','service','project','contact-us'];
+    const sections = ['home', 'about', 'vision', 'mission', 'goals','values','service','project','contact-us'];
     const extraOffset = 110; // زيادة الإزاحة لضبط التنشيط في الوقت المناسب
 
     sections.forEach((sectionId) => {
