@@ -6,11 +6,12 @@ import { MissionComponent } from "../mission/mission.component";
 import { GoalComponent } from "../goal/goal.component";
 import { GalaryComponent } from "../galary/galary.component";
 import { ValuesComponent } from "../values/values.component";
+import { ServiceComponent } from "../service/service.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MainComponent, AboutUsComponent, VisionComponent, MissionComponent, GoalComponent, GalaryComponent, ValuesComponent],
+  imports: [MainComponent, AboutUsComponent, VisionComponent, MissionComponent, GoalComponent, GalaryComponent, ValuesComponent, ServiceComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

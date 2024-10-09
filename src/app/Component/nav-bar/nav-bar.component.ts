@@ -1,12 +1,11 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SharedModule } from '../../Shared/Module/shared/shared.module';
-import { AddTextBeforeAfterDirective } from '../../Core/Directive/add-text-before-after.directive';
 import { LanguageService } from '../../Core/Service/language.service';
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [SharedModule,AddTextBeforeAfterDirective],
+  imports: [SharedModule],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss'
 })

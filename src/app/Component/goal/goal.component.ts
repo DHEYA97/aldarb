@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedModule } from '../../Shared/Module/shared/shared.module';
-import { AddTextBeforeAfterDirective } from '../../Core/Directive/add-text-before-after.directive';
 import { LanguageService } from '../../Core/Service/language.service';
 
 @Component({
   selector: 'app-goal',
   standalone: true,
-  imports: [SharedModule,AddTextBeforeAfterDirective],
+  imports: [SharedModule],
   templateUrl: './goal.component.html',
   styleUrl: './goal.component.scss'
 })
-export class GoalComponent 
-implements OnInit {
+export class GoalComponent implements OnInit {
   constructor(private languageService: LanguageService) {}
 
   ngOnInit(): void {

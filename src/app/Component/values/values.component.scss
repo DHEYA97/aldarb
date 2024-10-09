@@ -1,6 +1,6 @@
 .bor01
 {
-    position: absolute;
+    position: relative;
     width: 190px;
     height: 148px;
     border-radius: 4px;
@@ -8,7 +8,7 @@
 }
 .bor01 svg
 {
-    position: absolute;
+    position: relative;
     top: 50%;
     inset-inline-start: 15px;
     transform: translateY(-50%);
@@ -16,18 +16,19 @@
 }
 .bor02
 {
-    position: absolute;
+    position: relative;
     width: 176px;
     height: 115px;
     border-radius: 4px;
     border: 2px solid #F79321;
     inset-inline-start: 80px;
-    transform: translateY(15px);
+    transform: translateY(-133px);
     background-color: white;
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: top left;
 }
 
 .bor:hover .bor02
 {
-    transform: scale(1.1);
+    transform: scale(1.1) translateY(-133px);
 }

@@ -1,0 +1,37 @@
+<section id="service" class="py-5 mt-2 min-vh-100">
+    <div class="container">
+        <div class="w-25 mx-auto">
+            <h2 class="main-text"
+                *ngIf="'service.service' | translate as languageText" 
+                appAddTextBeforeAfter [text]="languageText" [isVisible]="languageText.length > 0"
+        >{{languageText}}</h2>
+        </div>
+        <div class="row gx-5 gy-2 mt-3 mx-a">
+            <!-- @for (item of items | keyvalue; track $index) { -->
+            @if(items)
+            {
+                @for (key of getKeys(items) ; track $index ; let i = $index) {
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="position-relative">
+                            <div class="img position-relative">
+                                <img [src]="'/images/service/service-' + (i + 1) + '.png'" [alt]="'service.items.' + key + '.title' | translate"/>
+                                <div class="position-absolute rounded-4 bor">
+                                </div>
+                            </div>
+                            <div class="text position-relative">
+                                <h4>{{ 'service.items.' + key + '.title' | translate }}</h4>
+                                <ul>
+                                    @for (detailKey of getKeys(items[key].detalis);track $index) {
+                                        <li>
+                                            {{ 'service.items.' + key + '.detalis.' + detailKey | translate }}
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</section>

@@ -47,5 +47,77 @@
         "Safety" : "Safety",
         "responsibility":"responsibility",
         "perfection":"perfection"
+    },
+    "service":{
+        "service" :"Service",
+        "items" : {
+            "item1" : {
+                "title" : "Transportation and storage of construction equipment",
+                "detalis":{
+                    "detali01" : "Heavy and light equipment transport",
+                    "detali02" : "Transport of bulldozers",
+                    "detali03" : "Transport of forklifts",
+                    "detali04" : "Transport of excavators",
+                    "detali05" : "Transport of cranes and lifting equipment"
+                }
+            },
+            "item2" : {
+                "title" : "Transportation of electrical equipment",
+                "detalis":{
+                    "detali01" : "Electric generators",
+                    "detali02" : "Electric cables",
+                    "detali03" : "Electric transformers"
+                }
+            },
+            "item3" : {
+                "title" : "Transportation of steel structures",
+                "detalis":{
+                    "detali01" : "Transporting structures and models of exceptional weights and sizes"
+                }
+            },
+            "item4" : {
+                "title" : "Transportation of tanks of all types and sizes",
+                "detalis":{
+                    "detali01" : "Silos tanks",
+                    "detali02" : "Petroleum tanks",
+                    "detali03" : "Gas tanks"
+                }
+            },"item5" : {
+                "title" : "Transport and storage of new and used trucks",
+                "detalis":{
+                    "detali01" : "Transportation of dump trucks",
+                    "detali02" : "Transportation of mixers and pumps",
+                    "detali03" : "Transportation of disabled trucks"
+                }
+            },
+            "item6" : {
+                "title" : "Transportation of construction materials",
+                "detalis":{
+                    "detali01" : "Transportation of ready-mixed concrete",
+                    "detali02" : "Transportation of precast walls",
+                    "detali03" : "Transportation of precast in all types and sizes",
+                    "detali04" : "Transporting concrete bridges from 18m to more than 36m in length"
+                }
+            },
+            "item7" : {
+                "title" : "Transportation of prefabricated rooms",
+                "detalis":{
+                    "detali01" : "Transportation of prefabricated rooms of all types and sizes"
+                }
+            },
+            "item8" : {
+                "title" : "Transportation of crusher parts",
+                "detalis":{
+                    "detali01" : "Transporting mixer parts",
+                    "detali02" : "Pulling elevated crushers"
+                }
+            },
+            "item9" : {
+                "title" : "Transportation and storage of containers",
+                "detalis":{
+                    "detali01" : "Transportation, storage, and unloading of 40-20 foot containers"
+                }
+            }
+        }
     }
 }

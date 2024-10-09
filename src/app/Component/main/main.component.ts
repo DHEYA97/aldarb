@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { SharedModule } from '../../Shared/Module/shared/shared.module';
-import { AddTextBeforeAfterDirective } from '../../Core/Directive/add-text-before-after.directive';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [SharedModule,AddTextBeforeAfterDirective],
+  imports: [SharedModule],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
