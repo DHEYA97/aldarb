@@ -1,6 +1,6 @@
 {
     "Language" : "Language",
-    "navbar": {
+    "NavbarAndFooter": {
         "home" : "Home",
         "about" : "About Us",
         "mission" : "Mission",
@@ -9,7 +9,12 @@
         "values" : "values",
         "service" : "services",
         "project" : "Project",
-        "contactUs" : "Contact Us"
+        "contactUs" : "Contact Us",
+        "location" : "Saudi Arabia - Riyadh - Al Nahda Branch Road - Al Faisaliah District",
+        "copy" : "All rights reserved",
+        "companyName" : "Aldarb general for land transportation Company",
+        "link" : "Quick Links",
+        "phone" : "+966 559 969 931"
     },
     "main":{
         "maintext" : "ensure that your goods are transported according to international standards.",
@@ -87,7 +92,8 @@
                 "detalis":{
                     "detali01" : "Transportation of dump trucks",
                     "detali02" : "Transportation of mixers and pumps",
-                    "detali03" : "Transportation of disabled trucks"
+                    "detali03" : "Transportation of disabled trucks",
+                    "detali04" : "Transportation of Bus"
                 }
             },
             "item6" : {
@@ -119,5 +125,12 @@
                 }
             }
         }
-    }
+    },
+    "project":{
+        "project"  : "Projects",
+        "project01": "project 1",
+        "project02": "project 2",
+        "project03": "project 3",
+        "project04": "project 4"
+    } 
 }

@@ -15,7 +15,7 @@
                 [routerLink]="['/home']"
                 (click)="setActiveSection('home')"
                 [class.active]="activeSection === 'home'">
-                {{'navbar.home' | translate}}
+                {{'NavbarAndFooter.home' | translate}}
             </a>
           </li>
           <li class="nav-item hover-text-container">
@@ -24,7 +24,7 @@
                 fragment="about" 
                 (click)="setActiveSection('about')"
                 [class.active]="activeSection === 'about'">
-                {{'navbar.about' | translate}}
+                {{'NavbarAndFooter.about' | translate}}
             </a>
           </li>
           <li class="nav-item hover-text-container">
@@ -33,7 +33,7 @@
                 fragment="vision" 
                 (click)="setActiveSection('vision')"
                 [class.active]="activeSection === 'vision'">
-                {{'navbar.vision' | translate}}
+                {{'NavbarAndFooter.vision' | translate}}
             </a>
           </li>
           <li class="nav-item hover-text-container">
@@ -42,7 +42,7 @@
                 fragment="message" 
                 (click)="setActiveSection('mission')"
                 [class.active]="activeSection === 'mission'">
-                {{'navbar.mission' | translate}}
+                {{'NavbarAndFooter.mission' | translate}}
             </a>
           </li>
           <li class="nav-item hover-text-container">
@@ -51,7 +51,7 @@
                 fragment="goals" 
                 (click)="setActiveSection('goals')"
                 [class.active]="activeSection === 'goals'">
-                {{'navbar.goals' | translate}}
+                {{'NavbarAndFooter.goals' | translate}}
             </a>
           </li>
           <li class="nav-item hover-text-container">
@@ -60,7 +60,7 @@
                 fragment="values" 
                 (click)="setActiveSection('values')"
                 [class.active]="activeSection === 'values'">
-                {{'navbar.values' | translate}}
+                {{'NavbarAndFooter.values' | translate}}
             </a>
           </li>
           <li class="nav-item hover-text-container">
@@ -69,7 +69,7 @@
                 fragment="service" 
                 (click)="setActiveSection('service')"
                 [class.active]="activeSection === 'service'">
-                {{'navbar.service' | translate}}
+                {{'NavbarAndFooter.service' | translate}}
             </a>
           </li>
           <li class="nav-item hover-text-container">
@@ -78,7 +78,7 @@
                 fragment="project" 
                 (click)="setActiveSection('project')"
                 [class.active]="activeSection === 'project'">
-                {{'navbar.project' | translate}}
+                {{'NavbarAndFooter.project' | translate}}
             </a>
           </li>
           <li class="nav-item dropdown">
@@ -92,7 +92,7 @@
           </li>
           <li class="nav-item hover-text-container">
             <button 
-              *ngIf="'navbar.contactUs' | translate as languageText" 
+              *ngIf="'NavbarAndFooter.contactUs' | translate as languageText" 
               appAddTextBeforeAfter [text]="languageText" [isVisible]="languageText.length > 0" 
               class="btn-gradient px-3 py-2" 
               [routerLink]="['/home']" 

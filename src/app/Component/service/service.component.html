@@ -11,7 +11,7 @@
             @if(items)
             {
                 @for (key of getKeys(items) ; track $index ; let i = $index) {
-                    <div class="col-lg-6 col-xl-4">
+                    <div class="col-lg-6 col-xl-4" role="button" (click)="navigateToService(i + 1)">
                         <div class="position-relative">
                             <div class="img position-relative">
                                 <img [src]="'/images/service/service-' + (i + 1) + '.png'" [alt]="'service.items.' + key + '.title' | translate"/>

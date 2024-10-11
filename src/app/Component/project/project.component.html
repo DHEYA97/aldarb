@@ -1,0 +1,36 @@
+<section id="project" class="mt-5 py-5">
+    <div class="container">
+        <div class="w-25 mx-auto">
+            <h2 class="main-text"
+                *ngIf="'project.project' | translate as languageText" 
+                appAddTextBeforeAfter [text]="languageText" [isVisible]="languageText.length > 0"
+        >{{languageText}}</h2>
+        </div>
+        <div class="row g-4 w-90 mx-auto mt-3">
+            <div class="col-md-3">
+                    <div class="project">
+                        <img src="/images/project/project-1.png"/>
+                        <h4>{{'project.project01' | translate}}</h4>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="project">
+                        <img src="/images/project/project-2.png"/>
+                        <h4>{{'project.project02' | translate}}</h4>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="project">
+                        <img src="/images/project/project-3.png"/>
+                        <h4>{{'project.project03' | translate}}</h4>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="project">
+                        <img src="/images/project/project-4.png"/>
+                        <h4>{{'project.project04' | translate}}</h4>
+                    </div>
+                </div>
+            </div>       
+    </div>
+</section>
