@@ -2,3 +2,12 @@
     width: 100%; /* جعل السلايدر يأخذ عرض الحاوية كاملاً */
     overflow: hidden; /* لإخفاء أي محتوى يتجاوز الحدود */
 }
+
+@media (max-width: 768px) {
+    .line{
+    position: relative;
+    transform: rotate(90deg);
+    top: 100px;
+    inset-inline-end: 20%;
+ }   
+}

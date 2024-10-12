@@ -31,7 +31,7 @@ export class NavBarComponent implements OnInit {
     const section = document.getElementById(sectionId);
     if (section) {
       const offsetTop = section.offsetTop;
-      const extraOffset = 110; // Adjust this value as needed
+      const extraOffset = 100; // Adjust this value as needed
       window.scrollTo({
         top: offsetTop - extraOffset,
         behavior: 'smooth',

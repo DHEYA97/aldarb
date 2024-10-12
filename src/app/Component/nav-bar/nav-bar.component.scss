@@ -1,3 +1,4 @@
+
 .nav-item a:hover,.active
 {
     color: #F79321 !important;
@@ -51,13 +52,26 @@
     font-weight: 500 !important;
 }
 
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .nav-link{
+        font-size: 14px;
+    }
+}
+
 @media (min-width: 990px) and (max-width: 1200px) {
     .nav-link{
-        font-size: 12px;
+        font-size: 10px;
     }
-    .btn-gradient
+    .contact button
     {
-        font-size: 12px;
-        padding: 7px !important;
+        padding: 5px !important;
+        width: 110px;
+    }
+}
+@media (max-width: 500px) {
+    .logo
+    {
+        width: 79% !important;
+        padding: 12px 0px;
     }
 }

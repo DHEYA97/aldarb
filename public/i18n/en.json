@@ -132,5 +132,9 @@
         "project02": "project 2",
         "project03": "project 3",
         "project04": "project 4"
+    },
+    "serviceDetailes":{
+        "provide" : "Al Darb general provides land and logistics",
+        "service" : "Service"
     } 
 }

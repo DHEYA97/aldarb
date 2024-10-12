@@ -1,17 +1,17 @@
 <section id="vision" class="mt-5 py-5">
     <div class="container">
         <div class="row d-flex align-items-center">
-            <div class="col-md-6">
+            <div class="col-md-12 col-lg-6 mx-md-auto text-center">
                 <h2 class="main-text" 
                     *ngIf="'vision.vision' | translate as languageText" 
                     appAddTextBeforeAfter [text]="languageText" [isVisible]="languageText.length > 0"
                     >{{languageText}}
                 </h2>
-                <h4 class="fs-5 fw-lighter text-start lh-base w-75">
+                <h4 class="mx-auto ms-lg-auto ms-xl-auto text-center text-lg-start text-xl-start fs-5 fw-lighter lh-lg w-75">
                     {{'vision.text' | translate}}
                 </h4>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12 col-lg-6 mt-3">
                 <img src="/images/vision.png" class="w-100 rounded-4 border-4 border-black"/>
             </div>
         </div>

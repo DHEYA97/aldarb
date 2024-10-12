@@ -1,18 +1,18 @@
 <section id="mission" class="mt-5 py-5">
     <div class="container">
         <div class="row d-flex align-items-center">
-            <div class="col-md-6">
-                <img src="/images/mission.png" class="w-100 rounded-4 border-4 border-black"/>
-            </div>
-            <div class="col-md-6 text-center">
+            <div class="col-md-12 col-lg-6 order-lg-2 order-xl-2 mx-md-auto text-center">
                 <h2 class="main-text" 
                     *ngIf="'mission.mission' | translate as languageText" 
                     appAddTextBeforeAfter [text]="languageText" [isVisible]="languageText.length > 0"
                     >{{languageText}}
                 </h2>
-                <h4 class="ms-auto fs-5 fw-lighter text-start lh-lg w-75">
+                <h4 class="mx-auto ms-lg-auto ms-xl-auto text-center text-lg-start text-xl-start fs-5 fw-lighter lh-lg w-75">
                     {{'mission.text' | translate}}
                 </h4>
+            </div>
+            <div class="col-md-12 col-lg-6 mt-3 order-lg-1 order-xl-1">
+                <img src="/images/mission.png" class="w-100 rounded-4 border-4 border-black"/>
             </div>
         </div>
     </div>

@@ -6,3 +6,24 @@
     border: 2px solid white;
     background-color: rgba(247, 147, 33,0.40);
 }
+#home
+{
+    margin-top: 77.5px;
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+    .maintext h1 {
+        font-size: 26px !important; /* مثال على استخدام rem */
+    }
+    .maintext h3 {
+        font-size: 18px !important; /* مثال على استخدام rem */
+    }
+}
+@media (max-width: 768px) {
+    .maintext h1 {
+        font-size: 20px !important; /* مثال على استخدام rem */
+    }
+    .maintext h3 {
+        font-size: 16px !important; /* مثال على استخدام rem */
+    }
+}

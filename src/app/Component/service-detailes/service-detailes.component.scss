@@ -6,10 +6,10 @@
 }
 .service-item
 {
-    margin-block: 15px;
+    margin-block: 10px;
     color: #1A1A1A;
     position: relative;
-    height: 63px;
+    height: 55px;
     border-radius: 16px;
     z-index: 5;
     overflow: hidden;
@@ -23,7 +23,7 @@
     height: 100%;
     inset-inline-end: -100%;
     background-color: #1A1A1A;
-    height: 63px;
+    height: 55px;
     border-radius: 16px;
     z-index: -1;
     transition: all 0.2s ease-in-out;
@@ -35,4 +35,17 @@
 .service-item:hover
 {
     color: white;
+}
+.active
+{
+    color: white;
+    background-color: #1A1A1A;
+}
+.service-content
+{
+    background-image: url("/images/fill.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
 }

@@ -32,3 +32,18 @@
 {
     transform: scale(1.1) translateY(-133px);
 }
+
+
+@media (max-width: 768px) {
+    .bor01
+    {
+        position: relative;
+        width: 170px;
+        height: 148px;
+    }
+    .bor02
+    {
+        width: 146px;
+        height: 115px;
+    }       
+}
