@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { OnInit,Component } from '@angular/core';
 import { SharedModule } from '../../Shared/Module/shared/shared.module';
-
+import AOS from 'aos';
+declare var $:any;
 @Component({
   selector: 'app-main',
   standalone: true,

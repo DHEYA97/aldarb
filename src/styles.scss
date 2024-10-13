@@ -189,3 +189,13 @@ color: $Second-bg-color !important;
     top: 0%;
     inset-inline-start: -20%;
 }
+
+/* تنسيق النص الرئيسي */
+[data-aos] {
+  opacity: 0; /* إخفاء العنصر */
+  transition: opacity 0.4s; /* إضافة انتقال سلس */
+}
+
+[data-aos].aos-animate {
+  opacity: 1; /* إظهار العنصر عند وجود التأثير */
+}

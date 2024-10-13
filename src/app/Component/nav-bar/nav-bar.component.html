@@ -95,8 +95,7 @@
               *ngIf="'NavbarAndFooter.contactUs' | translate as languageText" 
               appAddTextBeforeAfter [text]="languageText" [isVisible]="languageText.length > 0" 
               class="btn-gradient px-3 py-2" 
-              [routerLink]="['/home']" 
-              fragment="contact-us">
+              (click)="goToFooter()">
               <span>
                 {{languageText}}
               </span>

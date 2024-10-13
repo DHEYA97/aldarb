@@ -1,7 +1,9 @@
 <section id="mission" class="mt-5 py-5">
     <div class="container">
         <div class="row d-flex align-items-center">
-            <div class="col-md-12 col-lg-6 order-lg-2 order-xl-2 mx-md-auto text-center">
+            <div class="col-md-12 col-lg-6 order-lg-2 order-xl-2 mx-md-auto text-center"
+            data-aos="fade-up" data-aos-duration="1300" data-aos-offset="500"
+            >
                 <h2 class="main-text" 
                     *ngIf="'mission.mission' | translate as languageText" 
                     appAddTextBeforeAfter [text]="languageText" [isVisible]="languageText.length > 0"
@@ -12,7 +14,9 @@
                 </h4>
             </div>
             <div class="col-md-12 col-lg-6 mt-3 order-lg-1 order-xl-1">
-                <img src="/images/mission.png" class="w-100 rounded-4 border-4 border-black"/>
+                <img src="/images/mission.png" class="w-100 rounded-4 border-4 border-black"
+                data-aos="fade-down" data-aos-duration="1300" data-aos-offset="500"
+                />
             </div>
         </div>
     </div>

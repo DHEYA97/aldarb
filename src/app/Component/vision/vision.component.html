@@ -1,7 +1,9 @@
 <section id="vision" class="mt-5 py-5">
     <div class="container">
         <div class="row d-flex align-items-center">
-            <div class="col-md-12 col-lg-6 mx-md-auto text-center">
+            <div class="col-md-12 col-lg-6 mx-md-auto text-center"
+            data-aos="fade-down" data-aos-duration="1500" data-aos-offset="500"
+            >
                 <h2 class="main-text" 
                     *ngIf="'vision.vision' | translate as languageText" 
                     appAddTextBeforeAfter [text]="languageText" [isVisible]="languageText.length > 0"
@@ -12,7 +14,9 @@
                 </h4>
             </div>
             <div class="col-md-12 col-lg-6 mt-3">
-                <img src="/images/vision.png" class="w-100 rounded-4 border-4 border-black"/>
+                <img src="/images/vision.png" class="w-100 rounded-4 border-4 border-black" 
+                data-aos="fade-up" data-aos-duration="1500" data-aos-offset="500"
+            />
             </div>
         </div>
     </div>

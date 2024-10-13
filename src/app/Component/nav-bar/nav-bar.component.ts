@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SharedModule } from '../../Shared/Module/shared/shared.module';
 import { LanguageService } from '../../Core/Service/language.service';
@@ -10,7 +10,12 @@ import { LanguageService } from '../../Core/Service/language.service';
   styleUrl: './nav-bar.component.scss'
 })
 export class NavBarComponent implements OnInit {
+  @Output() scrollToFooter = new EventEmitter<void>();
   activeSection: string = 'home';
+
+  goToFooter() {
+    this.scrollToFooter.emit();
+  }
   constructor(private route: ActivatedRoute,private languageService:LanguageService) {}
   ngOnInit() {
     // Subscribe to fragment changes

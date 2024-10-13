@@ -21,4 +21,10 @@ export class AppComponent implements OnInit {
   initialAppLanguage():void{
     this.LanguageService.initialAppLanguage();
   }
+  scrollToFooter(): void {
+    const footer = document.getElementById('footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

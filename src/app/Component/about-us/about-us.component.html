@@ -5,7 +5,9 @@
                 appAddTextBeforeAfter [text]="languageText" [isVisible]="languageText.length > 0"
         >{{languageText}}</h2>
         <div class="container mt-5">
-            <div class="p-5 rounded-4 shadow bg-Gray">
+            <div class="p-5 rounded-4 shadow bg-Gray"
+                data-aos="flip-left" data-aos-duration="1500" data-aos-offset="300"
+            >
                 <h4 class="fs-4 fw-lighter text-start lh-lg">
                     {{'about.text' | translate}}
                 </h4>
