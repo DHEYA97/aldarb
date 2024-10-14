@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SharedModule } from '../../Shared/Module/shared/shared.module';
+
 @Component({
   selector: 'app-values',
   standalone: true,
@@ -7,6 +8,4 @@ import { SharedModule } from '../../Shared/Module/shared/shared.module';
   templateUrl: './values.component.html',
   styleUrl: './values.component.scss'
 })
-export class ValuesComponent {
-
-}
+export class ValuesComponent {}

@@ -30,24 +30,5 @@ export class HomeComponent implements OnInit {
     this.router.events.subscribe(() => {
       AOS.refresh();
     });
-
-    this.observeElements();
-  }
-
-  observeElements() {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('aos-animate'); // Add animation class when in view
-        } else {
-          entry.target.classList.remove('aos-animate'); // Remove animation class when out of view
-        }
-      });
-    });
-
-    const elements = this.el.nativeElement.querySelectorAll('[data-aos]');
-    elements.forEach((element: Element) => { // Specify the type of element
-      observer.observe(element);
-    });
   }
 }

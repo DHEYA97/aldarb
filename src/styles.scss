@@ -177,8 +177,7 @@ color: $Second-bg-color !important;
     inset-inline-end: 20%;
     font-size: 64px;
     font-weight: bold;
-    color: transparent; /* لجعل النص الداخلي فارغًا */
-    -webkit-text-stroke: 0.1px rgba(255, 165, 0, 0.2); 
+    color: rgba(255, 165, 0, 0.3);
     z-index: 1;    
     width: 250px;
   }
@@ -190,12 +189,18 @@ color: $Second-bg-color !important;
     inset-inline-start: -20%;
 }
 
-/* تنسيق النص الرئيسي */
 [data-aos] {
-  opacity: 0; /* إخفاء العنصر */
+  opacity: 0; /* إخفاء العنصر بشكل افتراضي */
   transition: opacity 0.4s; /* إضافة انتقال سلس */
 }
 
 [data-aos].aos-animate {
   opacity: 1; /* إظهار العنصر عند وجود التأثير */
+}
+
+@media (max-width: 768px) {
+  [data-aos] {
+      opacity: 1; /* تأكد من أن العنصر مرئي */
+      transition: none; /* إزالة أي تأثير */
+  }
 }

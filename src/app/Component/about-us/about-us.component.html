@@ -1,16 +1,16 @@
 <section id="about" class="mt-5 py-5">
-    <div class="conatainer text-center w-90 mx-auto">
+    <div class="container text-center w-90 mx-auto">
         <h2 class="main-text" 
-                *ngIf="'about.aboutus' | translate as languageText" 
-                appAddTextBeforeAfter [text]="languageText" [isVisible]="languageText.length > 0"
+            *ngIf="'about.aboutus' | translate as languageText" 
+            appAddTextBeforeAfter [text]="languageText" [isVisible]="languageText.length > 0"
         >{{languageText}}</h2>
-        <div class="container mt-5">
-            <div class="p-5 rounded-4 shadow bg-Gray"
-                data-aos="flip-left" data-aos-duration="1500" data-aos-offset="300"
+        <div class="container mt-3">
+            <div class="p-3 rounded-4 shadow bg-Gray"
+                data-aos="flip-left" data-aos-duration="1000" data-aos-offset="270"
             >
-                <h4 class="fs-4 fw-lighter text-start lh-lg">
+                <p class="fw-lighter text-start lh-lg about-text">
                     {{'about.text' | translate}}
-                </h4>
+                </p>
             </div>
         </div>
     </div>

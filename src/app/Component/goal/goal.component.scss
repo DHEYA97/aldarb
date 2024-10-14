@@ -1,8 +1,7 @@
 .border-text {
     font-size: 64px;
     font-weight: bold;
-    color: transparent; /* لجعل النص الداخلي فارغًا */
-    -webkit-text-stroke: 0.1px rgba(255, 165, 0, 0.8);
+    color: rgba(255, 165, 0, 0.8); /* لجعل النص الداخلي فارغًا */
 }
 .arraw-up,.arraw-down
 {
@@ -15,7 +14,18 @@
     top: 0%;
     //transform: scaleX(-1); 
 }
-
+.goal-text
+{
+    font-size: 18px;
+}
+.main-text 
+{
+    font-size: 32px !important;
+}
+.main-text::before {
+    font-size: 50px !important;
+    width: 230px !important;
+}
 @media (min-width: 990px) and (max-width: 1200px) {
     .arraw-up,.arraw-down
     {
@@ -39,5 +49,9 @@
     .arraw-up,.arraw-down
     {
         display: none;
+    }
+    .goal-text
+    {
+        font-size: 16px;
     }
 }

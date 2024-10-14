@@ -1,0 +1,15 @@
+[data-aos] {
+  opacity: 0; /* إخفاء العنصر بشكل افتراضي */
+  transition: opacity 0.4s; /* إضافة انتقال سلس */
+}
+
+[data-aos].aos-animate {
+  opacity: 1; /* إظهار العنصر عند وجود التأثير */
+}
+  
+@media (max-width: 768px) {
+  [data-aos] {
+      opacity: 1; /* تأكد من أن العنصر مرئي */
+      transition: none; /* إزالة أي تأثير */
+  }
+}
