@@ -3,13 +3,17 @@
     font-weight: bold;
     color: rgba(255, 165, 0, 0.8); /* لجعل النص الداخلي فارغًا */
 }
-.arraw-up,.arraw-down
+.arraw-up,.arraw-down,.arraw-up2,.arraw-down2
 {
     position: absolute;
     inset-inline-end: -20%;
     top: 20%;
 }
-.arraw-down
+.arraw-up2,.arraw-down2
+{
+    display: none;
+}
+.arraw-down,.arraw-down2
 {
     top: 0%;
     //transform: scaleX(-1); 
@@ -48,10 +52,23 @@
     
     .arraw-up,.arraw-down
     {
+        
         display: none;
+    }
+    .arraw-up2,.arraw-down2
+    {
+        display: inline-block;
+        inset-inline-end: 0%;
+        top: 111%;
+    }
+    .arraw-down2
+    {
+        inset-inline-start: -80% !important;
     }
     .goal-text
     {
+        width: 60% !important;
+        margin-inline: auto !important;
         font-size: 16px;
     }
 }

@@ -1,7 +1,8 @@
 import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { SharedModule } from '../../Shared/Module/shared/shared.module';
 import { LanguageService } from '../../Core/Service/language.service';
+import { TranslationService } from '../../Core/Service/translation.service';
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
@@ -12,11 +13,12 @@ import { LanguageService } from '../../Core/Service/language.service';
 export class NavBarComponent implements OnInit {
   @Output() scrollToFooter = new EventEmitter<void>();
   activeSection: string = 'home';
+  items: any = null;
 
   goToFooter() {
     this.scrollToFooter.emit();
   }
-  constructor(private route: ActivatedRoute,private languageService:LanguageService) {}
+  constructor(private route: ActivatedRoute,private router:Router,private languageService:LanguageService,private _translateService: TranslationService) {}
   ngOnInit() {
     // Subscribe to fragment changes
     this.route.fragment.subscribe((fragment) => {
@@ -24,6 +26,14 @@ export class NavBarComponent implements OnInit {
         this.scrollToSection(fragment);
       }
     });
+    this._translateService.getItems().subscribe(
+      (data) => {
+        this.items = data;
+      },
+      (error) => {
+        console.error('Error fetching service items:', error);
+      }
+    );
   }
   setActiveSection(section: string) {
     this.activeSection = section;
@@ -66,5 +76,11 @@ export class NavBarComponent implements OnInit {
 changeLang(lang:string):void
 {
   this.languageService.changeLang(lang);
+}
+getKeys(obj: any): string[] {
+  return Object.keys(obj);
+}
+navigateToService(id: number) {
+  this.router.navigate(['/service', id]);
 }
 }

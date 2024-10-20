@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { SharedModule } from './Shared/Module/shared/shared.module';
 import { NavBarComponent } from './Component/nav-bar/nav-bar.component';
 import { LanguageService } from './Core/Service/language.service';
 import { FooterComponent } from "./Component/footer/footer.component";
 import { Router } from '@angular/router';
+declare var $: any;
 
 @Component({
   selector: 'app-root',
@@ -12,11 +13,13 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit ,AfterViewInit{
   title = 'New-Angular-Course';  
   constructor(private LanguageService:LanguageService,private _router: Router){}
   ngOnInit(): void {
-    this.initialAppLanguage()
+    this.initialAppLanguage();
+    $('#loadingSpinner').show();
+    $('#content').hide();
   }
   
   initialAppLanguage():void{
@@ -32,5 +35,13 @@ export class AppComponent implements OnInit {
     if (footer) {
       footer.scrollIntoView({ behavior: 'smooth' });
     }
+  }
+  ngAfterViewInit(): void {
+    // عند اكتمال تحميل المكونات، أخفِ اللودينج وأظهر المحتوى
+    $(window).on('load', function() {
+      $('#loadingSpinner').fadeOut('slow', function() {
+        $('#content').fadeIn('slow');
+      });
+    });
   }
 }

@@ -1,43 +1,48 @@
-<section id="service-detailes" class="py-4 my-5">
-    <div class="container-fluid p-0 m-0">
-        <div class="service-container d-flex align-items-center">
-            <div class="container text-white">
-                <h1 class="fw-bolder">{{ 'service.items.' + currentkey + '.title' | translate }}</h1>
-                <h5 class="mt-5 fw-lighter"><a class="text-white" [routerLink]="['/home']">{{'NavbarAndFooter.home' | translate}} - {{ 'service.items.' + currentkey + '.title' | translate }}</a></h5>
-            </div>
-        </div>
-    </div>
-    <div class="container mt-5 py-3">
-        <div class="row gx-4">
-            <div class="col-md-6">
-                <div class="service-items">
-                    @if(items)
-                    {
-                        @for (key of getKeys(items) ; track $index ; let i = $index;) {
-                            <div class="service-item d-flex justify-content-between align-items-center" (click)="getActive(i,key)" [ngClass]="{'active': currentItem_id === i + 1}">
-                                <h5 class="ms-3">{{ 'service.items.' + key + '.title' | translate }}</h5>
-                                <svg class="arraw-start me-3" width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect y="0.5" width="32" height="32" rx="16" fill="white"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20.3312 8.96879C20.6311 9.26884 20.7996 9.67573 20.7996 10.1C20.7996 10.5243 20.6311 10.9311 20.3312 11.2312L15.0624 16.5L20.3312 21.7688C20.6226 22.0706 20.7839 22.4747 20.7803 22.8942C20.7766 23.3138 20.6083 23.7151 20.3117 24.0117C20.015 24.3084 19.6137 24.4766 19.1942 24.4803C18.7747 24.4839 18.3705 24.3226 18.0688 24.0312L11.6688 17.6312C11.3688 17.3312 11.2003 16.9243 11.2003 16.5C11.2003 16.0757 11.3688 15.6688 11.6688 15.3688L18.0688 8.96879C18.3688 8.66884 18.7757 8.50034 19.2 8.50034C19.6242 8.50034 20.0311 8.66884 20.3312 8.96879Z" fill="#1A1A1A"/>
-                                </svg>
-                            </div>
-                        }
-                    }
-                </div>
-            </div>
-            <div class="service-content col-md-6 d-flex justify-content-center align-items-center mt-2">
-                <div class="w-75 mx-auto p-5">
-                    <h4 class="lh-base">{{'serviceDetailes.provide' | translate}}<span class="fw-bolder"><br/>{{ 'service.items.' + currentkey + '.title' | translate }} {{'serviceDetailes.service' | translate}}</span></h4>
-                    <ul class="mt-3">
-                        @for (detailKey of getKeys(items[currentkey].detalis);track $index) {
-                            <li class="mt-4">
-                                {{ 'service.items.' + currentkey + '.detalis.' + detailKey | translate }}
-                            </li>
-                        }
-                    </ul>
+<div id="loadingSpinner2">
+    <div class="spinner2"></div>
+</div>
+<div id="content2">
+    <section id="service-detailes" class="py-4 my-5">
+        <div class="container-fluid p-0 m-0">
+            <div class="service-container d-flex align-items-center">
+                <div class="container text-white">
+                    <h1 class="fw-bolder">{{ 'service.items.' + currentkey + '.title' | translate }}</h1>
+                    <h5 class="mt-5 fw-lighter"><a class="text-white" [routerLink]="['/home']">{{'NavbarAndFooter.home' | translate}} - {{ 'service.items.' + currentkey + '.title' | translate }}</a></h5>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<app-project/>
+        <div class="container mt-5 py-3">
+            <div class="row gx-4">
+                <div class="col-md-6">
+                    <div class="service-items">
+                        @if(items)
+                        {
+                            @for (key of getKeys(items) ; track $index ; let i = $index;) {
+                                <div class="service-item d-flex justify-content-between align-items-center" (click)="getActive(i,key)" [ngClass]="{'active': currentItem_id === i + 1}">
+                                    <h5 class="ms-3">{{ 'service.items.' + key + '.title' | translate }}</h5>
+                                    <svg class="arraw-start me-3" width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect y="0.5" width="32" height="32" rx="16" fill="white"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.3312 8.96879C20.6311 9.26884 20.7996 9.67573 20.7996 10.1C20.7996 10.5243 20.6311 10.9311 20.3312 11.2312L15.0624 16.5L20.3312 21.7688C20.6226 22.0706 20.7839 22.4747 20.7803 22.8942C20.7766 23.3138 20.6083 23.7151 20.3117 24.0117C20.015 24.3084 19.6137 24.4766 19.1942 24.4803C18.7747 24.4839 18.3705 24.3226 18.0688 24.0312L11.6688 17.6312C11.3688 17.3312 11.2003 16.9243 11.2003 16.5C11.2003 16.0757 11.3688 15.6688 11.6688 15.3688L18.0688 8.96879C18.3688 8.66884 18.7757 8.50034 19.2 8.50034C19.6242 8.50034 20.0311 8.66884 20.3312 8.96879Z" fill="#1A1A1A"/>
+                                    </svg>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+                <div class="service-content col-md-6 d-flex justify-content-center align-items-center mt-2">
+                    <div class="w-75 mx-auto p-5">
+                        <h4 class="lh-base">{{'serviceDetailes.provide' | translate}}<span class="fw-bolder"><br/>{{ 'service.items.' + currentkey + '.title' | translate }} {{'serviceDetailes.service' | translate}}</span></h4>
+                        <ul class="mt-3">
+                            @for (detailKey of getKeys(items[currentkey].detalis);track $index) {
+                                <li class="mt-4">
+                                    {{ 'service.items.' + currentkey + '.detalis.' + detailKey | translate }}
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <app-project/>
+</div>

@@ -1,11 +1,19 @@
 .about-text
 {
     font-size: 20px;
+    padding: 20px;
 }
-
+.bg-Gray
+{
+    background-image: url('/images/fill-2.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 @media (max-width: 768px) {
     .about-text
     {
         font-size: 16px;
+        padding: 10px;
     }
 }

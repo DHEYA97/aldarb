@@ -10,15 +10,17 @@ import { ServiceComponent } from "../service/service.component";
 import { ProjectComponent } from "../project/project.component";
 import { Router } from '@angular/router';
 import AOS from 'aos';
+import { SharedModule } from '../../Shared/Module/shared/shared.module';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MainComponent, AboutUsComponent, VisionComponent, MissionComponent, GoalComponent, GalaryComponent, ValuesComponent, ServiceComponent, ProjectComponent],
+  imports: [SharedModule,MainComponent, AboutUsComponent, VisionComponent, MissionComponent, GoalComponent, GalaryComponent, ValuesComponent, ServiceComponent, ProjectComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit  {
+  isLoading = true;
   constructor(private router: Router, private el: ElementRef) {}
 
   ngOnInit(): void {
@@ -30,5 +32,5 @@ export class HomeComponent implements OnInit {
     this.router.events.subscribe(() => {
       AOS.refresh();
     });
-  }
+  } 
 }

@@ -1,4 +1,4 @@
-<section id="service" class="py-5 mt-2">
+<section id="service" class="py-5 mt-5">
     <div class="container">
         <div class="w-25 mx-auto">
             <h2 class="main-text"
@@ -18,7 +18,7 @@
                                 <div class="position-absolute rounded-4 bor">
                                 </div>
                             </div>
-                            <div class="text position-relative">
+                            <div class="text position-relative" [style.height]="height">
                                 <h4>{{ 'service.items.' + key + '.title' | translate }}</h4>
                                 <ul>
                                     @for (detailKey of getKeys(items[key].detalis);track $index) {

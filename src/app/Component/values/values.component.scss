@@ -16,21 +16,32 @@
 }
 .bor02
 {
-    position: relative;
+    position: absolute;
     width: 176px;
     height: 115px;
     border-radius: 4px;
     border: 2px solid #F79321;
     inset-inline-start: 80px;
-    transform: translateY(-133px);
+    top: 50%;
+    transform: translateY(-50%);
     background-color: white;
-    transition: transform 0.3s ease-in-out;
-    transform-origin: top left;
+    transition: all 0.3s ease-in-out;
 }
-
+.bor02 h4
+{
+    transition: all 0.3s ease-in-out;
+}
 .bor:hover .bor02
 {
-    transform: scale(1.1) translateY(-133px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 190px;
+    height: 130px;
+}
+.bor:hover .bor02 h4
+{
+   font-size: 28px;
+   font-weight: bolder;
 }
 
 @media (max-width: 768px) {

@@ -15,6 +15,10 @@
     line-height: 26px;
     font-size: 18px;
 }
+.footer-c2 .auto
+{
+    margin-inline: auto;
+}
 .footer-c2 ul
 {
     position: relative;
@@ -44,4 +48,13 @@
     width: 300px;
     z-index: 2;
     opacity: 0.05;
+}
+
+@media (max-width: 768px) {
+    .footer-c1 h5 
+    {
+        width: 255px;
+        line-height: 26px;
+        font-size: 14px;
+    }    
 }

@@ -32,5 +32,13 @@ export class GoalComponent implements OnInit {
         svgElement.style.transform = 'scaleX(1)'; // إعادة الاتجاه إلى الطبيعي
       }
     });
+    const svgElements2 = document.querySelectorAll<SVGSVGElement>('.arraw-up2 svg, .arraw-down2 svg')
+    svgElements2.forEach(svgElement => {
+      if (this.languageService.getDirection() === 'ltr') {
+        svgElement.style.transform = 'scaleX(1) rotate(-90deg)'; // عكس الاتجاه
+      } else {
+        svgElement.style.transform = 'scaleX(-1) rotate(-90deg)'; // إعادة الاتجاه إلى الطبيعي
+      }
+    });
   }
 }

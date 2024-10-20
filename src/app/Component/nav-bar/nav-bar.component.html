@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top shadow border-5 bg-white w-100 mt-0 p-0">
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm border-5 bg-white w-100 mt-0 p-0">
     <div class="container">
       <a class="navbar-brand text-center logo" 
         [routerLink]="['/home']"
@@ -63,16 +63,23 @@
                 {{'NavbarAndFooter.values' | translate}}
             </a>
           </li>
-          <li class="nav-item hover-text-container">
-            <a class="nav-link hover-text" 
-                [routerLink]="['/home']" 
-                fragment="service" 
-                (click)="setActiveSection('service')"
-                [class.active]="activeSection === 'service'">
-                {{'NavbarAndFooter.service' | translate}}
+         <li class="nav-item dropdown hover-text-container">
+            <a class="nav-link dropdown-toggle hover-text"  role="button" data-bs-toggle="dropdown" aria-expanded="false" [routerLink]="['/home']" 
+            fragment="service" 
+            (click)="setActiveSection('service')"
+            [class.active]="activeSection === 'service'">
+              {{'NavbarAndFooter.service' | translate}}
             </a>
+            <ul class="dropdown-menu">
+              @if(items)
+                        {
+                            @for (key of getKeys(items) ; track $index ; let i = $index;) {
+                              <li (click)="navigateToService(i + 1)"><a class="dropdown-item">{{ 'service.items.' + key + '.title' | translate }}</a></li>
+                            }
+                        }
+            </ul>
           </li>
-          <li class="nav-item hover-text-container">
+          <!-- <li class="nav-item hover-text-container">
             <a class="nav-link hover-text" 
                 [routerLink]="['/home']" 
                 fragment="project" 
@@ -80,7 +87,7 @@
                 [class.active]="activeSection === 'project'">
                 {{'NavbarAndFooter.project' | translate}}
             </a>
-          </li>
+          </li> -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               {{'Language' | translate}}

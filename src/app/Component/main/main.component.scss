@@ -14,7 +14,7 @@
 #home
 {
     margin-top: 77.5px;
-    min-height: 80vh;
+    height: 617px;
 }
 .profile
 {
@@ -31,6 +31,7 @@
     {
         min-height: 60vh;
     }
+    
 }
 @media (max-width: 768px) {
     .maintext h1 {
@@ -44,7 +45,7 @@
     }
     #home
     {
-        min-height: 60vh;
+        max-height: 65vh;
     }
     .social
     {
@@ -52,5 +53,10 @@
         width: 50px;
         height: 288px;
         padding: 10px 20px;
+    }
+    .profile
+    {
+        margin-inline-start: 50px;
+        margin-bottom: 20px;
     }
 }

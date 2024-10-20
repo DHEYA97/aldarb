@@ -131,7 +131,9 @@ color: $Second-bg-color !important;
 .w-90{
     width: 90% !important;
 }
-
+.text-justify {
+  text-align: justify !important;
+}
 
 /* التحكم في عرض وارتفاع شريط التمرير */
 ::-webkit-scrollbar {
@@ -165,7 +167,7 @@ color: $Second-bg-color !important;
     width: 227px;
     position: relative;
     display: inline-block;
-    font-size: 40px;
+    font-size: 32px;
     font-weight: bold;
     color: black;
   }
@@ -173,9 +175,9 @@ color: $Second-bg-color !important;
   /* استخدام ::after لإنشاء النص الخلفي */
   .main-text::before {
     position: absolute;
-    top: -70px;
+    top: -60px;
     inset-inline-end: 20%;
-    font-size: 64px;
+    font-size: 50px;
     font-weight: bold;
     color: rgba(255, 165, 0, 0.3);
     z-index: 1;    
